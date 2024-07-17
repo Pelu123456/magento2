@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Widget/etc/widget.xsd">
+    <widget id="mageplaza_blog_posts" class="Mageplaza\Blog\Block\Widget\Posts" is_enabled="true" ttl="3600">
+        <label translate="true">Mageplaza Blog Posts</label>
+        <description translate="true">Display Mageplaza Blog Posts</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" translate="true" required="true">
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="description" xsi:type="textarea" translate="true" required="true">
+                <label translate="true">Description</label>
+            </parameter>
+            <parameter name="template" xsi:type="select" translate="true" required="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="grid" xsi:type="option" value="grid" translate="true">Grid</option>
+                    <option name="list" xsi:type="option" value="list" translate="true">List</option>
+                </options>
+            </parameter>
+            <parameter name="selected_posts" xsi:type="multiselect" required="true">
+                <label translate="true">Posts</label>
+                <source_model>Mageplaza\BlogWidget\Model\Config\Source\Posts</source_model>
+            </parameter>
+            <parameter name="max_posts" xsi:type="text" required="true">
+                <label translate="true">Maximum Posts to Display</label>
+            </parameter>
+            <parameter name="enable_slide" xsi:type="select" translate="true" required="true">
+                <label translate="true">Enable Slide</label>
+                <options>
+                    <option name="no" xsi:type="option" value="0" translate="true">No</option>
+                    <option name="yes" xsi:type="option" value="1" translate="true">Yes</option>
+                </options>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

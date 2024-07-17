@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/config.xsd">
+    <default>
+        <helloworld>
+            <general>
+                <text_field>Your default text</text_field>
+                <textarea_field>Your default textarea</textarea_field>
+            </general>
+        </helloworld>
+    </default>
+</config>

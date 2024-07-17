@@ -346,6 +346,12 @@ return [
         'Magento_WishlistAnalytics' => 1,
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
+        'AHT_CustomerEmail' => 1,
+        'Mageplaza_Core' => 1,
+        'Mageplaza_Blog' => 1,
+        'Mageplaza_BannerSlider' => 1,
+        'Mageplaza_HelloWorld' => 1,
+        'Mageplaza_Smtp' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1
