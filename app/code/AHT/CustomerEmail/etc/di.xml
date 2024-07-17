@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <!-- <type name="AHT\CustomerEmail\Console\SendMail">
-        <arguments>
-            <argument name="sendMailHelper" xsi:type="object">AHT\CustomerEmail\Helper\SendEmailHelper</argument>
-        </arguments>
-    </type> -->
     <type name="Magento\Framework\Console\CommandList">
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="sendmail" xsi:type="object">AHT\CustomerEmail\Console\SendMail</item>
             </argument>
+        </arguments>
+    </type>
+     <type name="AHT\CustomerEmail\Console\SendMail">
+        <arguments>
+            <item name="Helper" xsi:type="object">AHT\CustomerEmail\Helper\SendEmailHelper</item>
         </arguments>
     </type>
 </config>

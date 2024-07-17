@@ -8,10 +8,10 @@ class Interceptor extends \AHT\CustomerEmail\Console\SendMail implements \Magent
 {
     use \Magento\Framework\Interception\Interceptor;
 
-    public function __construct(\AHT\CustomerEmail\Helper\SendEmailHelper $sendEmailHelper)
+    public function __construct(?string $name = null)
     {
         $this->___init();
-        parent::__construct($sendEmailHelper);
+        parent::__construct($name);
     }
 
     /**

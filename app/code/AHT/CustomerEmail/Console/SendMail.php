@@ -8,26 +8,28 @@ use AHT\CustomerEmail\Helper\SendEmailHelper;
 
 class SendMail extends Command
 {
-    protected $sendEmailHelper;
-
-    public function __construct(SendEmailHelper $sendEmailHelper)
-    {
-        $this->sendEmailHelper = $sendEmailHelper;
-    }
-
-    protected function configure()
-    {
-        $this->setName('send:sendmail');
-        $this->setDescription('Send birthday emails to customers');
-        parent::configure();
-    }
-
-    protected function execute(InputInterface $input, OutputInterface $output)
-    {
-        $output->writeln("Sending birthday emails...");
-        $this->sendEmailHelper->execute();
-        $output->writeln("Birthday emails sent successfully.");
-
-        return Command::SUCCESS;
-    }
+   protected function configure()
+   {
+       $this->setName('send:sendmail');
+       $this->setDescription('Demo command line');
+       
+       parent::configure();
+   }
+   
+   protected function execute(InputInterface $input, OutputInterface $output)
+   {
+       $output->writeln("Sending birthday emails...");
+       
+       $sendEmailHelper = $this->SendEmailHelper();
+       
+       if ($sendEmailHelper) {
+           $test = $sendEmailHelper->test();
+           $output->writeln("Birthday emails sent successfully. Test result: " . $test);
+       } else {
+           $output->writeln("Error: SendEmailHelper is not injected correctly.");
+       }
+   
+       return Command::SUCCESS;
+   }
+   
 }

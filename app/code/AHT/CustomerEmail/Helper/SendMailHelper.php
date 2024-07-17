@@ -85,4 +85,8 @@ class SendEmailHelper extends AbstractHelper {
 
         $this->inlineTranslation->resume();
     }
+    public function test()
+    {
+        return 'hello';
+    }
 }
